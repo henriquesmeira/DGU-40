@@ -34,8 +34,6 @@ services:
       DATABASE_URL: "postgresql://myuser:mypassword@postgres:5432/mydatabase"
     volumes:
       - .:/app
-    # Uncomment this line to run your python ETL script
-    # command: ["python", "import.py"]
     networks:
       - teste-anac
   
@@ -47,14 +45,14 @@ services:
     depends_on:
       - postgres
     environment:
-      DBT_PROFILES_DIR: /app/dbt_project
+      DBT_PROFILES_DIR: /app
       DATABASE_URL: "postgresql://myuser:mypassword@postgres:5432/mydatabase"
     volumes:
       - .:/app
     working_dir: /app
     command: >
       bash -c "pip install --no-cache-dir dbt-postgres &&
-               cd dbt_project &&
+               cd /app &&
                dbt debug &&
                dbt compile &&
                dbt run"

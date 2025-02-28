@@ -2,11 +2,9 @@ name: 'my_dbt_project'
 version: '1.0'
 profile: 'default'
 
-# Caminhos para os modelos
-model-paths: ["C:/Users/henrique.soares/Desktop/DataGlowUp/models"]
-seed-paths: ["C:/Users/henrique.soares/Desktop/DataGlowUp/seeds"]
-
-# Se você estiver utilizando configurações específicas para modelos, pode manter algo assim:
+model-paths: ["C:/Users/henrique.soares/Desktop/DGU/models"]
+seed-paths: ["C:/Users/henrique.soares/Desktop/DGU/seeds"]
 models:
   my_dbt_project:
-    materialized: table
+    newmodel:
+      +materialized: view  # Especifica que o modelo será materializado como 'view'

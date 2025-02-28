@@ -1,1 +1,1 @@
-{"_invocation_id": "174ffd03-6341-42ae-8889-010442b8d046", "linked": {"0": {"name": "model.my_dbt_project.raw.data", "type": "model"}}}
+{"_invocation_id": "aa8440e2-02f5-4af5-a9ad-d6d0757b4c32", "linked": {"0": {"name": "model.my_dbt_project.newmodel", "type": "model"}}}
